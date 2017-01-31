@@ -1,0 +1,82 @@
+Sapna Maheswari 
+Student Id - W1175583 
+
+   NAME	        MAJOR	            GRADUATION_YEAR	 PENDING_BILL
+   Rob Trent	English	            2015	         4000
+   Amy Brown	Business            2016	         8000
+   Henry Seng	MSIS	            2017	         2000
+   Sue Smith	Chemistry	    2018	         3000
+   Lana Singh	Computer Science    2014	         1000
+
+   
+1) Find number of students
+
+   SELECT COUNT(*) AS 'Number of Students'
+
+   FROM STUDENT
+   Result:
+   Number of Students
+   5
+   
+
+2)  Compute the total of pending bills for all students
+
+    SELECT SUM(PENDING_BILL) AS 'Total Pending Bill'
+
+    FROM STUDENT
+
+	Result:
+	Total Pending Bill
+        18000
+	
+3) Find Students who have graduated
+
+   SELECT *
+
+   FROM STUDENT
+
+   WHERE GRADUATION_YEAR < 2015
+   
+   Result:
+   NAME	        MAJOR	            GRADUATION_YEAR	 PENDING_BILL
+   Lana Singh	Computer Science    2014	         1000
+   
+4) Reduce pending bill by 10% for all students
+
+   UPDATE STUDENT SET PENDING_BILL = 0.9*PENDING_BILL
+   
+   Result:
+   (5 row(s) affected)
+   
+5) Compute the total of pending bills for all students
+
+   SELECT SUM(PENDING_BILL) AS 'Total Pending Bill'
+
+   FROM STUDENT
+   
+   Result:
+   Total Pending Bill
+   16200
+  
+6) Delete Students who have graduated
+
+   DELETE
+
+   FROM STUDENT
+
+   WHERE GRADUATION_YEAR < 2015
+   
+   Result:
+   (1 row(s) affected)
+
+   
+7) Find total number of students
+ 
+   SELECT COUNT(*) AS 'Number of Students'
+
+   FROM STUDENT 
+   
+   Result:
+   Number of Students
+   4
+   
